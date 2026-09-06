@@ -1,8 +1,6 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        n = len(nums)
-        total = n * (n + 1) // 2
-        curr = 0
-        for num in nums:
-            curr += num
-        return total - curr
+        n=len(nums)
+        expected=n*(n+1)//2
+        actual=sum(nums)
+        return expected-actual
